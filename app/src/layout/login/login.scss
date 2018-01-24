@@ -1,0 +1,82 @@
+//VARIABLES
+
+$form--login__border-radus: .25rem;
+$form--login__color: #606468;
+$form--login__label__bgcolor: #363b41;
+$form--login__input__bgcolor: #3b4148;
+$form--login__input__bgcolor--hover: #434A52;
+$form--login__submit__bgcolor: #ea4c88;
+$form--login__submit__bgcolor--hover: #d44179;
+$form--login__submit__color: #eee;
+
+
+.login{
+
+  max-width: 500px;
+  margin: 200px auto;
+
+
+  //Both username and password globals
+  input {
+    height: 50px;
+
+    color:grey;
+
+    border: 0;
+    margin: 0;
+    outline: 0;
+    padding-left: 15px;
+    transition: background-color .3s;
+
+    background-color: $form--login__input__bgcolor;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+
+    &:focus,
+    &:hover {
+      background-color: $form--login__input__bgcolor--hover;
+    }
+  }
+
+  //Both username and password globals
+  label{
+    height: 50px;
+    background-color: $form--login__label__bgcolor;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    border-color: $form--login__label__bgcolor;
+
+    >i{
+      width: 30px;
+    }
+  }
+
+  .username{
+    margin-bottom: 20px;
+  }
+
+  .password{
+    margin-bottom: 20px;
+
+  }
+
+  .sign-in{
+    >button{
+      width: 100%;
+      background-color: $form--login__submit__bgcolor;
+      border-color: $form--login__submit__bgcolor;
+      color: $form--login__submit__color;
+      font-weight: bold;
+      text-transform: uppercase;
+
+      &:focus,
+      &:hover {
+        background-color: $form--login__submit__bgcolor--hover;
+      }
+    }
+
+  }
+
+}

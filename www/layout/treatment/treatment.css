@@ -1,0 +1,152 @@
+.Treatment {
+  left: 0;
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+  position: fixed;
+  right: 0;
+  bottom: 80px;
+  top: 0;
+  overflow: hidden; }
+  .Treatment .row {
+    margin: 0; }
+    .Treatment .row > div {
+      padding: 0; }
+  .Treatment .treatment-view {
+    background-color: #607D8B;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    padding-top: 0px;
+    overflow: auto; }
+  .Treatment .panel {
+    transition: all 0.5s cubic-bezier(0.5, -0.005, 0.2, 1) !important;
+    -webkit-transition: all 0.5s cubic-bezier(0.5, -0.005, 0.2, 1) !important;
+    color: #fff; }
+    .Treatment .panel > .row > div {
+      margin-bottom: 15px; }
+  .Treatment p {
+    margin-bottom: 0; }
+  .Treatment .input-group i {
+    width: 14px; }
+  .Treatment .panel label, .Treatment .panel input {
+    background-color: initial;
+    color: white; }
+  .Treatment .panel ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: white; }
+  .Treatment .panel ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: white; }
+  .Treatment .panel :-ms-input-placeholder {
+    /* IE 10+ */
+    color: white; }
+  .Treatment .panel :-moz-placeholder {
+    /* Firefox 18- */
+    color: white; }
+  .Treatment .select-option {
+    width: 100%;
+    height: 40px;
+    background-color: #607D8B;
+    border: 1px solid white;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+  .Treatment .grid-row .header {
+    background-color: #4b626d;
+    color: white;
+    font-size: 1.5em;
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase; }
+  .Treatment .grid-row .grid {
+    width: 100%; }
+    .Treatment .grid-row .grid .header-th-group {
+      padding: 0; }
+    .Treatment .grid-row .grid .header-th {
+      background-color: #36474f; }
+    .Treatment .grid-row .grid .product-item {
+      background-color: #41545e;
+      margin-top: 5px; }
+      .Treatment .grid-row .grid .product-item .product-columns {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 40px;
+        padding-top: 10px; }
+        .Treatment .grid-row .grid .product-item .product-columns:last-child {
+          padding-top: 2px;
+          font-size: 25px;
+          background-color: #607D8B; }
+  .Treatment #yourElement video {
+    width: 300px; }
+  .Treatment #yourElement canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px; }
+  .Treatment .bar-code {
+    margin-top: -10px;
+    margin-bottom: 10px; }
+    .Treatment .bar-code #input-addon {
+      visibility: hidden;
+      width: 0px; }
+    .Treatment .bar-code #interactive {
+      border-radius: 10px;
+      box-shadow: 0px 0px 6px 4px rgba(0, 0, 0, 0.26);
+      margin: 0 auto;
+      max-height: 250px;
+      position: relative;
+      overflow: auto; }
+      .Treatment .bar-code #interactive canvas {
+        vertical-align: middle;
+        max-height: 250px; }
+      .Treatment .bar-code #interactive .imgBuffer {
+        width: 100%; }
+      .Treatment .bar-code #interactive .drawingBuffer {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0; }
+    .Treatment .bar-code #interactive-live {
+      border-radius: 10px;
+      box-shadow: 0px 0px 6px 4px rgba(0, 0, 0, 0.26);
+      margin: 0 auto;
+      max-height: 160px;
+      position: relative;
+      overflow: auto; }
+      .Treatment .bar-code #interactive-live .imgBuffer {
+        width: 100%; }
+      .Treatment .bar-code #interactive-live .drawingBuffer {
+        position: absolute;
+        top: 0;
+        left: 0; }
+      .Treatment .bar-code #interactive-live > video {
+        width: 100%;
+        vertical-align: middle; }
+      .Treatment .bar-code #interactive-live > canvas {
+        width: 100%;
+        vertical-align: middle; }
+  .Treatment .treatment-hint {
+    margin-top: 30px; }
+  .Treatment textarea {
+    color: black;
+    width: 100%;
+    height: 120px; }
+  .Treatment .loading-row {
+    margin-top: 120px !important; }
+  .Treatment .finish-row {
+    margin-top: 120px !important; }
+
+.sync-div {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(1, 1, 1, 0.3); }
+  .sync-div > div {
+    padding-bottom: 20px;
+    margin-top: 210px;
+    color: white;
+    background-color: rgba(1, 1, 1, 0.3);
+    border-radius: 24px; }

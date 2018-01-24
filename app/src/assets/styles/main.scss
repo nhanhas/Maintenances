@@ -1,0 +1,49 @@
+.item { }
+
+.item.ng-move,
+.item.ng-enter,
+.item.ng-leave {
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+}
+
+.item.ng-leave.ng-leave-active,
+.item.ng-move,
+.item.ng-enter {
+  opacity:0;
+}
+
+.item.ng-leave,
+.item.ng-move.ng-move-active,
+.item.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+
+.container{
+
+
+}
+
+
+$base__bgcolor: #2c3338;
+$base__color: #606468;
+$base__font-family-fallback: sans-serif;
+$base__font-family: 'Open Sans';
+$base__font-size: .875rem;
+$base__font-weight: 400;
+$base__line-height: 1.5;
+
+
+
+body{
+
+  background-color: $base__bgcolor;
+  color: $base__color;
+  //font: $base__font-weight #{$base__font-size}/#{$base__line-height} $base__font-family, $base__font-family-fallback;
+
+
+  transition: all 1s cubic-bezier(.5, -0.005, 0.2, 1) !important;
+  -webkit-transition: all 1s cubic-bezier(.5, -0.005, 0.2, 1) !important;
+
+}

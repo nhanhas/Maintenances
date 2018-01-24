@@ -1,0 +1,81 @@
+<!-- toolbar -->
+<toolbar view-selected="{{toolbarSelected}}" on-refresh-list="getDocuments()"></toolbar>
+
+<div class="sync-div" ng-show="synching">
+
+    <div class="col-xs-4 col-xs-offset-4 text-center">
+        <h5>A processar</h5>
+        <span><i class="fa fa fa-spinner fa-spin fa-3x"></i></span>
+    </div>
+
+</div>
+
+<!-- Include the  content to show -->
+<div class="Pending">
+
+    <!-- Config needed... -->
+    <div class="panel pending-view" ng-show="mustConfig">
+        <div class="row config-row">
+
+            <div class="col-xs-12 text-center">
+                <h3>Configuração necessária</h3>
+                <h3>para consultar Faturas</h3>
+                <span><i class="fa fa fa-cogs fa-3x"></i></span>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="panel pending-view" ng-show="!mustConfig">
+
+        <div class="row text-center">
+
+            <!-- table of invoices -->
+            <div class="col-xs-12 grid-row text-center">
+
+                <div class="header">Em aberto</div>
+
+
+                <div class="grid">
+
+                    <!-- header -->
+                    <div class="row header-th-group">
+
+                        <!--<div class="col-xs-2 header-th header-ndoc">NºDoc</div>-->
+                        <div class="col-xs-4 header-th header-ndoc">Nome</div>
+                        <div class="col-xs-3 header-th ">Data</div>
+                        <div class="col-xs-3 header-th ">Total</div>
+                        <div class="col-xs-2 header-th header-data">...</div>
+                    </div>
+
+                    <!-- hint -->
+                    <div class="row pending-hint" ng-show="invoiceList.length === 0" >
+                        <div class="col-xs-12 text-center">
+                            <span>Sem Faturas em aberto</span>
+                            <!-- <span ng-show="loadingDocuments"><i class="fa fa fa-spinner fa-spin"></i></span> -->
+                        </div>
+                    </div>
+
+                    <!-- orders -->
+                    <div class="row product-item" ng-show="invoiceList.length > 0" ng-repeat="invoice in invoiceList">
+
+                        <!--<div class="col-xs-2 product-columns"><span>{{invoice.fno}}</span></div>-->
+                        <div class="col-xs-4 product-columns"><span>{{invoice.nome}}</span></div>
+                        <div class="col-xs-3 product-columns"><span>{{getInvoiceDate(invoice.fdata) | date}}</span></div>
+                        <div class="col-xs-3 product-columns"><span>{{invoice.etotal}}</span></div>
+                        <div class="col-xs-2 product-columns" ng-click="editInvoice(invoice)"><i class="fa fa-edit"></i></div>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+

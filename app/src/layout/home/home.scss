@@ -1,0 +1,117 @@
+.Home{
+  left: 0;
+  margin-left: 70px;
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+
+  position: absolute;
+  right: 0;
+  height: 100%;
+
+  overflow: hidden;
+
+  .row {
+    margin:0;
+    >div{
+      padding:0;//cols without padding
+    }
+  }
+
+  .home-view{
+    height: 100%;
+    margin-top: 155px;
+    .fa-home{
+      font-size: 80px;
+    }
+  }
+
+  .add-view{
+    background-color: #16a085;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    left: 100%;
+
+    padding-top: 155px;
+
+    .fa{
+      font-size: 80px;
+    }
+
+    &.move-add-panel{
+      left:0;
+    }
+  }
+
+
+  .pending-view{
+    background-color: #3498db;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    left: 100%;
+
+    padding-top: 155px;
+
+    .fa{
+      font-size: 80px;
+    }
+
+    &.move-pending-panel{
+      left:0;
+    }
+  }
+
+  .treatment-view{
+    background-color: #607D8B;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    left: 100%;
+
+    padding-top: 155px;
+
+    .fa{
+      font-size: 80px;
+    }
+
+    &.move-pending-panel{
+      left:0;
+    }
+  }
+
+  .settings-view{
+    background-color: #ff5d4c;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    left: 100%;
+
+    padding-top: 155px;
+
+    .fa{
+      font-size: 80px;
+    }
+
+    &.move-settings-panel{
+      left:0;
+    }
+  }
+
+  //for panel transitions-------
+  .panel{
+    transition: all 0.5s cubic-bezier(.5, -0.005, 0.2, 1) !important;
+    -webkit-transition: all 0.5s cubic-bezier(.5, -0.005, 0.2, 1) !important;
+    color: #fff;
+  }
+
+
+
+  //for panel transitions-------
+
+
+
+
+
+
+}

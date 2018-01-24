@@ -1,0 +1,14 @@
+{
+  "name": "app",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "angular": "1.x",
+    "angular-route": "1.x",
+    "font-awesome": "4.2",
+    "bootstrap": "3.x",
+    "quagga": "*",
+    "requirejs":"*"
+
+  }
+}

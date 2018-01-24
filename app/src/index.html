@@ -1,0 +1,87 @@
+<!doctype html>
+<html ng-app="App">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <title>Scanner App</title>
+
+    <!-- Mobile App-->
+    <script src="cordova.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="libs/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Semantic UI -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/dropdown.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/transition.min.css" type="text/css">
+
+    <!-- App CSS -->
+    <link href="assets/styles/main.css" rel="stylesheet">
+    <!-- Views CSS -->
+    <link href="shared/header/header.css" rel="stylesheet">
+    <link href="shared/navbar/navbar.css" rel="stylesheet">
+    <link href="shared/toolbar/toolbar.css" rel="stylesheet">
+
+    <link href="layout/login/login.css" rel="stylesheet">
+    <link href="layout/home/home.css" rel="stylesheet">
+    <link href="layout/order/order.css" rel="stylesheet">
+    <link href="layout/pending/pending.css" rel="stylesheet">
+    <link href="layout/settings/settings.css" rel="stylesheet">
+    <link href="layout/treatment/treatment.css" rel="stylesheet">
+
+
+
+
+
+</head>
+<body>
+
+<!-- App Body -->
+<div class="container" ng-view></div>
+
+<!-- AngularJS -->
+<script src="libs/angular/angular.min.js"></script>
+<script src="libs/angular-route/angular-route.min.js"></script>
+<script src="libs/quagga/dist/quagga.js"></script>
+<!--<script src="libs/angular/angular-animate.min.js"></script>-->
+
+<!-- Modules -->
+<script src="app.js"></script>
+
+
+<!-- Controllers -->
+<script src="layout/login/LoginController.js"></script>
+<script src="layout/home/HomeController.js"></script>
+<script src="layout/order/OrderController.js"></script>
+<script src="layout/pending/PendingController.js"></script>
+<script src="layout/settings/SettingsController.js"></script>
+<script src="layout/treatment/TreatmentController.js"></script>
+<!-- Global Utils -->
+<script src="shared/utils/ClientUtils.js"></script>
+<script src="shared/utils/ServerUtils.js"></script>
+
+<!-- Directives -->
+<script src="shared/header/header.js"></script>
+<script src="shared/navbar/navbar.js"></script>
+<script src="shared/toolbar/toolbar.js"></script>
+
+
+<!-- Bootstrap -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- Semantic UI -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/dropdown.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/transition.min.js"></script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+.login {
+  max-width: 500px;
+  margin: 200px auto; }
+  .login input {
+    height: 50px;
+    color: grey;
+    border: 0;
+    margin: 0;
+    outline: 0;
+    padding-left: 15px;
+    transition: background-color .3s;
+    background-color: #3b4148;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0; }
+    .login input:focus, .login input:hover {
+      background-color: #434A52; }
+  .login label {
+    height: 50px;
+    background-color: #363b41;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    border-color: #363b41; }
+    .login label > i {
+      width: 30px; }
+  .login .username {
+    margin-bottom: 20px; }
+  .login .password {
+    margin-bottom: 20px; }
+  .login .sign-in > button {
+    width: 100%;
+    background-color: #ea4c88;
+    border-color: #ea4c88;
+    color: #eee;
+    font-weight: bold;
+    text-transform: uppercase; }
+    .login .sign-in > button:focus, .login .sign-in > button:hover {
+      background-color: #d44179; }

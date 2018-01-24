@@ -1,0 +1,66 @@
+.Home {
+  left: 0;
+  margin-left: 70px;
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  overflow: hidden; }
+  .Home .row {
+    margin: 0; }
+    .Home .row > div {
+      padding: 0; }
+  .Home .home-view {
+    height: 100%;
+    margin-top: 155px; }
+    .Home .home-view .fa-home {
+      font-size: 80px; }
+  .Home .add-view {
+    background-color: #16a085;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    left: 100%;
+    padding-top: 155px; }
+    .Home .add-view .fa {
+      font-size: 80px; }
+    .Home .add-view.move-add-panel {
+      left: 0; }
+  .Home .pending-view {
+    background-color: #3498db;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    left: 100%;
+    padding-top: 155px; }
+    .Home .pending-view .fa {
+      font-size: 80px; }
+    .Home .pending-view.move-pending-panel {
+      left: 0; }
+  .Home .treatment-view {
+    background-color: #607D8B;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    left: 100%;
+    padding-top: 155px; }
+    .Home .treatment-view .fa {
+      font-size: 80px; }
+    .Home .treatment-view.move-pending-panel {
+      left: 0; }
+  .Home .settings-view {
+    background-color: #ff5d4c;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    left: 100%;
+    padding-top: 155px; }
+    .Home .settings-view .fa {
+      font-size: 80px; }
+    .Home .settings-view.move-settings-panel {
+      left: 0; }
+  .Home .panel {
+    transition: all 0.5s cubic-bezier(0.5, -0.005, 0.2, 1) !important;
+    -webkit-transition: all 0.5s cubic-bezier(0.5, -0.005, 0.2, 1) !important;
+    color: #fff; }

@@ -1,0 +1,21 @@
+.navbar-custom {
+  left: 0;
+  position: fixed;
+  color: #606468;
+  font-size: 40px;
+  height: 100%;
+  width: 70px; }
+  .navbar-custom .row {
+    margin: 100px auto; }
+    .navbar-custom .row .home-option {
+      margin-bottom: 20px; }
+    .navbar-custom .row .add-option {
+      margin-bottom: 20px; }
+    .navbar-custom .row .pending-option {
+      margin-bottom: 20px; }
+    .navbar-custom .row .treatment-option {
+      margin-bottom: 20px; }
+  .navbar-custom .option-selected {
+    color: white; }
+  .navbar-custom .smaller-icon {
+    font-size: 20px; }

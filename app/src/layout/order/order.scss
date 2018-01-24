@@ -1,0 +1,270 @@
+.Order {
+  left: 0;
+  //margin-left: 70px;
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+
+  position: fixed;
+  right: 0;
+  bottom: 80px;
+  //height: 100%;
+  top:0;
+
+  overflow: hidden;
+
+  //Semantic UI
+  .ui.search.dropdown .menu {
+    max-height: 18.014286rem !important;
+  }
+
+
+  .row {
+    margin: 0;
+    > div {
+      padding: 0; //cols without padding
+    }
+  }
+
+  .order-view {
+    background-color: #16a085;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    padding-top: 0;
+    // padding-top: 15px;
+    overflow: auto;
+
+
+  }
+
+
+
+  .panel{
+    transition: all 0.5s cubic-bezier(.5, -0.005, 0.2, 1) !important;
+    -webkit-transition: all 0.5s cubic-bezier(.5, -0.005, 0.2, 1) !important;
+    color: #fff;
+
+    > .row{
+      //margin:15px;
+    }
+  }
+
+  #yourElement{
+
+    video{
+      width: 300px;
+    }
+    canvas{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 300px;
+    }
+
+  }
+
+
+  .bar-code{
+    //margin-top: 100px;//will be removed after insert grid
+    margin-top: -10px;//will be removed after insert grid
+    margin-bottom: 10px;
+
+
+    //bar image
+    #input-addon{
+      visibility: hidden;
+      width: 0px;
+    }
+    #interactive{
+      border-radius: 10px;
+      box-shadow: 0px 0px 6px 4px rgba(0,0,0,0.26);
+
+      margin: 0 auto;
+
+      //max-width: 330px;
+      //max-height: 250px;
+      max-height: 160px;
+
+      position: relative;
+      overflow: auto;
+      //height: 250px;
+
+      canvas{
+        vertical-align: middle;
+        max-height: 250px;
+      }
+      .imgBuffer{
+        width: 100%;
+
+      }
+      .drawingBuffer{
+        width: 100%;
+        position: absolute;
+        top:0;
+        left: 0;
+      }
+
+    }
+
+    #interactive-live{
+      border-radius: 10px;
+      box-shadow: 0px 0px 6px 4px rgba(0,0,0,0.26);
+      margin: 0 auto;
+
+      //max-width: 330px;
+      max-height: 160px;
+
+      position: relative;
+      overflow: auto;
+      //height: 250px;
+
+      .imgBuffer{
+        width: 100%;
+      }
+      .drawingBuffer{
+        //width: 100%;
+        position: absolute;
+        top:0;
+        left: 0;
+      }
+
+      > video{
+        width: 100%;
+        vertical-align: middle;
+      }
+      > canvas{
+        width: 100%;
+        vertical-align: middle;
+      }
+
+    }
+
+  }
+
+  //hint
+  .order-hint{
+    margin-top: 30px;
+  }
+
+  .client-select{
+    margin-top:10px;
+    padding: 10px !important;
+    select{
+      color:black;
+       width: 200px;
+    }
+
+  }
+
+
+//Grid matters
+  .grid-row {
+
+    .header {
+      background-color: darken(#16a085, 10%);
+      color: white;
+      font-size: 1.5em;
+      padding: 1rem;
+      text-align: center;
+      text-transform: uppercase;
+      //border-top-left-radius: 5px;
+      //border-top-right-radius: 5px;
+    }
+
+    .grid {
+      width: 100%;
+
+      .header-th-group {
+        padding: 0;
+      }
+
+      .header-th {
+        background-color: darken(#16a085, 20%);
+      }
+
+      .header-ref {
+        //border-bottom-left-radius: 5px;
+      }
+
+      .header-qtt {
+        //border-bottom-right-radius: 5px;
+      }
+
+      .product-item {
+        background-color: darken(#16a085, 15%);
+        //border-radius: 20px;
+        margin-top: 5px;
+
+        .product-columns {
+          text-overflow: ellipsis;
+
+          /* Required for text-overflow to do anything */
+          white-space: nowrap;
+          overflow: hidden;
+
+          height: 40px;
+          padding-top: 10px;
+
+          //where input at
+          &:nth-of-type(3) {
+            padding-top: 0;
+          }
+
+          &:last-child {
+            padding-top: 0;
+            font-size: 25px;
+            //border-radius: 20px;
+            background-color: rgba(255, 0, 0, 0.5);
+          }
+
+          //input for qtts
+          input{
+            background-color: white;
+            width: 60px;
+            color: black;
+            border: none;
+            text-align: center;
+            height: 30px;
+            margin-top: 5px;
+          }
+
+        }
+
+      }
+
+    }
+  }
+
+  .loading-row{
+    margin-top: 120px!important;
+  }
+
+  .finish-row{
+    margin-top: 120px!important;
+  }
+
+  .config-row{
+    margin-top: 120px!important;
+  }
+
+}
+
+.sync-div{
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(1,1,1,0.3);
+
+  >div{
+    padding-bottom: 20px;
+    margin-top:210px;
+    color: white;
+    background-color: rgba(1,1,1,0.3);
+    border-radius: 24px;
+  }
+
+
+}

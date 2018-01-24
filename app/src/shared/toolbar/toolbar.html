@@ -1,0 +1,203 @@
+<!-- Only for mobile -->
+<div class="toolbar-custom">
+
+    <div class="row text-center" ng-show="viewSelected==='order-start'">
+
+        <div class="col-xs-6 home-option" ng-click="goBack()">
+            <i class="fa fa-home"></i>
+        </div>
+
+        <div class="col-xs-6 reset-option" ng-click="onStartOrder()">
+            <i class="fa fa-arrow-circle-right"></i>
+            <p class="description">Continuar</p>
+        </div>
+
+    </div>
+
+    <div class="row text-center" ng-show="viewSelected==='order'">
+
+        <div class="col-xs-3 home-option" ng-click="goBack()">
+            <i class="fa fa-home"></i>
+        </div>
+        <div class="col-xs-3 add-product-option">
+
+            <div class="add-prod-wheel" ng-show="addProdClicked">
+                <div class="col-xs-6" ng-click="addNewProductBar()"><i class="fa fa-barcode"></i></div>
+                <div class="col-xs-6" ng-click="addNewProductManual()"><i class="fa fa-pencil-square-o"></i></div>
+            </div>
+
+            <i class="fa fa-plus" ng-click="toggleAddNew()"></i>
+            <p class="description">Adicionar</p>
+        </div>
+
+        <div class="col-xs-3 finish-option" ng-click="onFinishInvoince()">
+            <i class="fa fa-check"></i>
+            <p class="description">Finalizar</p>
+        </div>
+
+        <div class="col-xs-3 reset-option" ng-click="onResetAll()">
+            <i class="fa fa-remove"></i>
+            <p class="description">Reiniciar</p>
+        </div>
+
+    </div>
+
+    <div class="row text-center" ng-show="viewSelected==='order-reset'">
+
+        <div class="col-xs-6 home-option" ng-click="goBack()">
+            <i class="fa fa-home"></i>
+        </div>
+
+        <div class="col-xs-6 reset-option" ng-click="onResetAll()">
+            <i class="fa fa-plus-circle"></i>
+            <p class="description">Nova Fatura</p>
+        </div>
+
+    </div>
+
+    <div class="row text-center" ng-show="viewSelected==='order-config'">
+
+        <div class="col-xs-6 home-option" ng-click="goBack()">
+            <i class="fa fa-home"></i>
+        </div>
+
+        <div class="col-xs-6 reset-option" ng-click="goConfig()">
+            <i class="fa fa-cogs"></i>
+            <p class="description">Config.</p>
+        </div>
+
+    </div>
+
+    <div class="row text-center" ng-show="viewSelected==='settings'">
+
+        <div class="col-xs-4 home-option" ng-click="goBack()">
+            <i class="fa fa-home"></i>
+        </div>
+
+
+        <div class="col-xs-4 reset-settings-option" ng-click="resetSettings()">
+            <i class="fa fa-rotate-left"></i>
+            <p class="description">Novas Config.</p>
+        </div>
+
+        <div class="col-xs-4 reset-settings-option" ng-click="connectSettings()">
+            <i class="fa fa-arrow-circle-right"></i>
+            <p class="description">Connectar</p>
+        </div>
+
+    </div>
+
+    <div class="row text-center" ng-show="viewSelected==='settings-finalize'">
+
+        <div class="col-xs-4 home-option" ng-click="goBack()">
+            <i class="fa fa-home"></i>
+        </div>
+
+        <div class="col-xs-4 reset-settings-option" ng-click="resetSettings()">
+            <i class="fa fa-rotate-left"></i>
+            <p class="description">Novas Config.</p>
+        </div>
+
+        <div class="col-xs-4 reset-settings-option" ng-click="finalizeSettings()">
+            <i class="fa fa-check-circle"></i>
+            <p class="description">Confirmar</p>
+        </div>
+
+    </div>
+
+    <div class="row text-center" ng-show="viewSelected==='settings-last'">
+
+        <div class="col-xs-6 home-option" ng-click="goBack()">
+            <i class="fa fa-home"></i>
+        </div>
+
+        <div class="col-xs-6 reset-settings-option" ng-click="resetSettings()">
+            <i class="fa fa-rotate-left"></i>
+            <p class="description">Novas Config.</p>
+        </div>
+
+    </div>
+
+    <div class="row text-center" ng-show="viewSelected==='pending'">
+
+        <div class="col-xs-6 home-option" ng-click="goBack()">
+            <i class="fa fa-home"></i>
+        </div>
+
+        <div class="col-xs-6 refresh-option" ng-click="refreshList()">
+            <i class="fa fa-refresh"></i>
+            <p class="description">Refrescar</p>
+        </div>
+
+    </div>
+
+    <div class="row text-center" ng-show="viewSelected==='pending-config'">
+
+        <div class="col-xs-6 home-option" ng-click="goBack()">
+            <i class="fa fa-home"></i>
+        </div>
+
+        <div class="col-xs-6 reset-option" ng-click="goConfig()">
+            <i class="fa fa-cogs"></i>
+            <p class="description">Config.</p>
+        </div>
+
+    </div>
+
+
+    <div class="row text-center" ng-show="viewSelected==='treatment'">
+
+        <div class="col-xs-3 home-option" ng-click="goBack()">
+            <i class="fa fa-home"></i>
+        </div>
+
+        <div class="col-xs-3 add-product-option">
+
+            <div class="add-prod-wheel" ng-show="addProdClicked">
+                <div class="col-xs-6" ng-click="addNewRefTreat()"><i class="fa fa-barcode"></i></div>
+                <div class="col-xs-6" ng-click="addNewTreatManual()"><i class="fa fa-pencil-square-o"></i></div>
+            </div>
+
+            <i class="fa fa-plus" ng-click="toggleAddNew()"></i>
+            <p class="description">Adicionar</p>
+        </div>
+
+        <div class="col-xs-3 reset-option" ng-click="resetTreat()">
+            <i class="fa fa-rotate-left"></i>
+            <p class="description">Outro Lote</p>
+        </div>
+
+        <div class="col-xs-3 reset-option" ng-click="saveTreat()">
+            <i class="fa fa-save"></i>
+            <p class="description">Guardar</p>
+        </div>
+
+    </div>
+
+    <div class="row text-center" ng-show="viewSelected==='treatment-config'">
+
+        <div class="col-xs-6 home-option" ng-click="goBack()">
+            <i class="fa fa-home"></i>
+        </div>
+
+        <div class="col-xs-6 reset-option" ng-click="goConfig()">
+            <i class="fa fa-cogs"></i>
+            <p class="description">Config.</p>
+        </div>
+
+    </div>
+
+    <div class="row text-center" ng-show="viewSelected==='treatment-success'">
+
+        <div class="col-xs-6 home-option" ng-click="goBack()">
+            <i class="fa fa-home"></i>
+        </div>
+
+        <div class="col-xs-6 reset-option" ng-click="resetTreat()">
+            <i class="fa fa-plus-circle"></i>
+            <p class="description">Novo tratamento</p>
+        </div>
+
+    </div>
+
+</div>

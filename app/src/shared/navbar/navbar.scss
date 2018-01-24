@@ -1,0 +1,44 @@
+.navbar-custom{
+  left: 0;
+  position: fixed;
+  color: #606468;
+  font-size: 40px;
+  height: 100%;
+  width: 70px;
+
+  //options
+  .row{
+    margin: 100px auto;
+
+    .home-option{
+      margin-bottom: 20px;
+    }
+
+    .add-option{
+      margin-bottom: 20px;
+    }
+
+    .pending-option{
+      margin-bottom: 20px;
+    }
+
+    .treatment-option{
+      margin-bottom: 20px;
+    }
+
+    .settings-option{
+
+
+    }
+
+  }
+
+  .option-selected{
+    color:white;
+  }
+
+  .smaller-icon{
+    font-size: 20px;
+  }
+
+}

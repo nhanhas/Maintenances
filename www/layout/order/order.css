@@ -1,0 +1,141 @@
+.Order {
+  left: 0;
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+  position: fixed;
+  right: 0;
+  bottom: 80px;
+  top: 0;
+  overflow: hidden; }
+  .Order .ui.search.dropdown .menu {
+    max-height: 18.014286rem !important; }
+  .Order .row {
+    margin: 0; }
+    .Order .row > div {
+      padding: 0; }
+  .Order .order-view {
+    background-color: #16a085;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    padding-top: 0;
+    overflow: auto; }
+  .Order .panel {
+    transition: all 0.5s cubic-bezier(0.5, -0.005, 0.2, 1) !important;
+    -webkit-transition: all 0.5s cubic-bezier(0.5, -0.005, 0.2, 1) !important;
+    color: #fff; }
+  .Order #yourElement video {
+    width: 300px; }
+  .Order #yourElement canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px; }
+  .Order .bar-code {
+    margin-top: -10px;
+    margin-bottom: 10px; }
+    .Order .bar-code #input-addon {
+      visibility: hidden;
+      width: 0px; }
+    .Order .bar-code #interactive {
+      border-radius: 10px;
+      box-shadow: 0px 0px 6px 4px rgba(0, 0, 0, 0.26);
+      margin: 0 auto;
+      max-height: 160px;
+      position: relative;
+      overflow: auto; }
+      .Order .bar-code #interactive canvas {
+        vertical-align: middle;
+        max-height: 250px; }
+      .Order .bar-code #interactive .imgBuffer {
+        width: 100%; }
+      .Order .bar-code #interactive .drawingBuffer {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0; }
+    .Order .bar-code #interactive-live {
+      border-radius: 10px;
+      box-shadow: 0px 0px 6px 4px rgba(0, 0, 0, 0.26);
+      margin: 0 auto;
+      max-height: 160px;
+      position: relative;
+      overflow: auto; }
+      .Order .bar-code #interactive-live .imgBuffer {
+        width: 100%; }
+      .Order .bar-code #interactive-live .drawingBuffer {
+        position: absolute;
+        top: 0;
+        left: 0; }
+      .Order .bar-code #interactive-live > video {
+        width: 100%;
+        vertical-align: middle; }
+      .Order .bar-code #interactive-live > canvas {
+        width: 100%;
+        vertical-align: middle; }
+  .Order .order-hint {
+    margin-top: 30px; }
+  .Order .client-select {
+    margin-top: 10px;
+    padding: 10px !important; }
+    .Order .client-select select {
+      color: black;
+      width: 200px; }
+  .Order .grid-row .header {
+    background-color: #107360;
+    color: white;
+    font-size: 1.5em;
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase; }
+  .Order .grid-row .grid {
+    width: 100%; }
+    .Order .grid-row .grid .header-th-group {
+      padding: 0; }
+    .Order .grid-row .grid .header-th {
+      background-color: #0a463a; }
+    .Order .grid-row .grid .product-item {
+      background-color: #0d5d4d;
+      margin-top: 5px; }
+      .Order .grid-row .grid .product-item .product-columns {
+        text-overflow: ellipsis;
+        /* Required for text-overflow to do anything */
+        white-space: nowrap;
+        overflow: hidden;
+        height: 40px;
+        padding-top: 10px; }
+        .Order .grid-row .grid .product-item .product-columns:nth-of-type(3) {
+          padding-top: 0; }
+        .Order .grid-row .grid .product-item .product-columns:last-child {
+          padding-top: 0;
+          font-size: 25px;
+          background-color: rgba(255, 0, 0, 0.5); }
+        .Order .grid-row .grid .product-item .product-columns input {
+          background-color: white;
+          width: 60px;
+          color: black;
+          border: none;
+          text-align: center;
+          height: 30px;
+          margin-top: 5px; }
+  .Order .loading-row {
+    margin-top: 120px !important; }
+  .Order .finish-row {
+    margin-top: 120px !important; }
+  .Order .config-row {
+    margin-top: 120px !important; }
+
+.sync-div {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(1, 1, 1, 0.3); }
+  .sync-div > div {
+    padding-bottom: 20px;
+    margin-top: 210px;
+    color: white;
+    background-color: rgba(1, 1, 1, 0.3);
+    border-radius: 24px; }

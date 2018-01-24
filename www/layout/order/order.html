@@ -1,0 +1,173 @@
+<!-- toolbar -->
+<toolbar view-selected="{{toolbarSelected}}" on-start="onStartingOrder()" on-add-manual="afterDecode(ref)" on-add="onAddNewProduct()" on-reset="onResetAll()" on-finish="onFinishInvoice()"></toolbar>
+
+<div class="sync-div" ng-show="synching">
+
+    <div class="col-xs-4 col-xs-offset-4 text-center">
+        <h5>A processar</h5>
+        <span><i class="fa fa fa-spinner fa-spin fa-3x"></i></span>
+    </div>
+
+</div>
+
+<!-- Include the  content to show -->
+<div class="Order">
+
+    <!-- Config needed... -->
+    <div class="panel order-view" ng-show="step0">
+        <div class="row config-row">
+
+            <div class="col-xs-12 text-center">
+                <h3>Configuração necessária</h3>
+                <h3>para criar Faturas</h3>
+                <span><i class="fa fa fa-cogs fa-3x"></i></span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Choose client -->
+    <div class="panel order-view" ng-show="stepChoose">
+        <div class="row config-row">
+
+            <div class="col-xs-12 text-center">
+                <h3>Escolha Cliente</h3>
+                <h3>para a nova Fatura</h3>
+            </div>
+            <!-- client choose-->
+            <div class="col-xs-12 text-center client-select">
+
+                <!-- Stable Version -->
+                <!--<select ng-model="clientSelected" class="client-option">
+                    <option ng-repeat="client in clientList" value="{{client.no}}">{{client.nome}}</option>
+                </select>-->
+
+                <div class="ui fluid search selection dropdown client-option">
+                    <input type="hidden" ng-model="clientSelected" name="client" id="clientInput">
+                    <i class="dropdown icon"></i>
+                    <div id="clientLabel" class="default text">Cliente</div>
+                    <div class="menu">
+                        <!-- <div class="item" data-value="af"></i>Afghanistan</div> -->
+
+                        <div class="item" style="font-size:12px" data-value="{{client.no}}" ng-repeat="client in clientList"></i>{{client.nome}}</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- fulfill order -->
+    <div class="panel order-view" ng-show="step1">
+
+        <!-- product img -->
+        <div class="col-xs-12 bar-code text-center" ng-show="productsList.length !== 0 || liveIsReady">
+            <!--<span>Artigo</span>-->
+            <input id="input-addon" type="file" accept="image/*" capture="camera"
+                   onchange="angular.element(this).scope().imageUploaded(this)"/>
+
+            <div id="interactive-live" ng-if="liveStreamAvailable" class="viewport"></div>
+            <div id="interactive" ng-if="!liveStreamAvailable" class="viewport"></div>
+
+        </div>
+
+        <div class="row text-center">
+
+            <!-- table of products -->
+            <div class="col-xs-12 grid-row text-center">
+
+                <div class="header">Artigos</div>
+
+
+                <div class="grid">
+
+                    <!-- header -->
+                    <div class="row header-th-group">
+                        <div class="col-xs-2 header-th ">1/2</div>
+                        <div class="col-xs-5 header-th header-ref">Prod.</div>
+                        <div class="col-xs-3 header-th ">Qtt</div>
+                        <div class="col-xs-2 header-th header-qtt">...</div>
+                    </div>
+
+                    <!-- hint -->
+                    <div class="row order-hint" ng-show="productsList.length === 0" ng-click="onAddNewProduct()">
+                        <div class="col-xs-12 text-center">
+                            <span>Comece a sua Fatura por:</span>
+                        </div>
+
+                        <div class="col-xs-12 text-center">
+                            <span><i class="fa fa-plus fa-2x"></i></span>
+                        </div>
+
+                        <div class="col-xs-12 text-center">
+                            <span>"Adicionar Artigo" </span>
+                        </div>
+                    </div>
+
+                    <!-- order lines -->
+                    <div class="row product-item" ng-show="productsList.length > 0" ng-repeat="product in productsList">
+
+                        <div class="col-xs-2 product-columns text-center">
+                            <span><input type="checkbox" ng-model="product.half" style="width: auto;margin-top: -5px;" value="{{product.half}}" disabled></span>
+
+                        </div>
+                        <div class="col-xs-5 product-columns"><span style="font-size: 10px;">{{product.design}}</span></div>
+                        <div class="col-xs-3 product-columns">
+                            <input type="number" ng-model="product.qtt" value="{{product.qtt}}">
+                            <!--<span>{{product.qtt}}</span>-->
+                        </div>
+
+                        <div class="col-xs-2 product-columns" ng-click="removeProduct(product.ref)"><i class="fa fa-trash"></i></div>
+
+                    </div>
+
+                    </div>
+
+
+
+            </div>
+
+            <!-- erro msg -->
+            <div class="col-xs-12 text-center" ng-show="errorMsg.length > 0">
+                <span style="color:firebrick"><i class="fa fa-warning"></i> {{errorMsg}}</span>
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+
+    <!-- loading... -->
+    <div class="panel order-view" ng-show="step2">
+        <div class="row loading-row">
+
+            <div class="col-xs-12 text-center" ng-show="invoicePending === undefined">
+                <h3>A criar fatura</h3>
+                <span><i class="fa fa fa-spinner fa-spin fa-3x"></i></span>
+            </div>
+            <div class="col-xs-12 text-center" ng-show="invoicePending !== undefined">
+                <h3>A atualizar fatura</h3>
+                <span><i class="fa fa fa-spinner fa-spin fa-3x"></i></span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- finished order -->
+    <div class="panel order-view" ng-show="step3">
+        <div class="row finish-row">
+
+            <div class="col-xs-12 text-center">
+                <h3>Fatura gravada com sucesso</h3>
+                <span><i class="fa fa fa-check fa-3x"></i></span>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+

@@ -1,0 +1,24 @@
+<!-- Only for mobile -->
+<div class="navbar-custom">
+
+    <div class="row text-center">
+
+        <div class="col-xs-12 home-option" ng-click="selectView('home')" ng-class="{'smaller-icon' : viewSelected !== 'home'}">
+            <i class="fa fa-home"></i>
+        </div>
+        <div class="col-xs-12 add-option" ng-click="selectView('add')" ng-class="{'smaller-icon' : viewSelected !== 'home' && viewSelected !== 'add', 'option-selected' : viewSelected === 'add'}">
+            <i class="fa fa-file-text-o"></i>
+        </div>
+        <div class="col-xs-12 pending-option" ng-click="selectView('pending')" ng-class="{'smaller-icon' : viewSelected !== 'home' && viewSelected !== 'pending', 'option-selected' : viewSelected === 'pending'}">
+            <i class="fa fa-folder-open-o"></i>
+        </div>
+        <div class="col-xs-12 treatment-option" ng-click="selectView('treatment')" ng-class="{'smaller-icon' : viewSelected !== 'home' && viewSelected !== 'treatment', 'option-selected' : viewSelected === 'treatment'}">
+            <i class="fa fa-medkit"></i>
+        </div>
+        <div class="col-xs-12 settings-option" ng-click="selectView('settings')" ng-class="{'smaller-icon' : viewSelected !== 'home' && viewSelected !== 'settings', 'option-selected' : viewSelected === 'settings'}">
+            <i class="fa fa-cogs"></i>
+        </div>
+
+    </div>
+
+</div>

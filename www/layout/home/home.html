@@ -1,0 +1,103 @@
+<!-- Nav bar-->
+<navbar view-selected="viewSelected"></navbar>
+
+
+<!-- Home INI -->
+<div class="Home">
+
+    <!-- navbar 'home' -->
+    <div class="home-view" ng-show=" viewSelected === 'home'">
+        <div class="row text-center">
+
+            <div class="col-xs-12"><i class="fa fa-home"></i></div>
+            <div class="col-xs-12"><label>Home</label></div>
+            <div class="col-xs-12">
+                <p>Escolha uma opção:</p>
+                <p> <i class="fa fa-file-text-o"></i> - Nova Fatura</p>
+                <p> <i class="fa fa-folder-open-o"></i> - Faturas em aberto</p>
+                <p> <i class="fa fa-medkit"></i> - Tratamentos de lote</p>
+                <p> <i class="fa fa-cogs"></i> - Configure a ligação ao Drive FX</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- navbar 'add' -->
+    <div class="panel add-view" ng-class="{'move-add-panel' : viewSelected === 'add'}">
+        <div class="row text-center">
+
+            <div class="col-xs-12"><i class="fa fa-file-text-o"></i></div>
+            <div class="col-xs-12"><label>Nova Fatura</label></div>
+            <div class="col-xs-12">
+                <p>Após configurar a </p>
+                <p>ligação ao Drive FX:</p>
+                <p>
+                    <button type="button" class="btn btn-default btn-lg" ng-click="startOrder()">
+                        Nova Fatura
+                    </button>
+                </p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- navbar 'Open' -->
+    <div class="panel pending-view" ng-class="{'move-pending-panel' : viewSelected === 'pending'}">
+        <div class="row text-center">
+
+            <div class="col-xs-12"><i class="fa fa-folder-open-o"></i></div>
+            <div class="col-xs-12"><label>Faturas em Aberto</label></div>
+            <div class="col-xs-12">
+                <p>Após configurar a </p>
+                <p>ligação ao Drive FX:</p>
+                <p>
+                    <button type="button" class="btn btn-default btn-lg" ng-click="viewPending()">
+                        Consulte
+                    </button>
+                </p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- navbar 'treatment' -->
+    <div class="panel treatment-view" ng-class="{'move-pending-panel' : viewSelected === 'treatment'}">
+        <div class="row text-center">
+
+            <div class="col-xs-12"><i class="fa fa-medkit"></i></div>
+            <div class="col-xs-12"><label>Tratamentos de Lote</label></div>
+            <div class="col-xs-12">
+                <p>Após configurar a </p>
+                <p>ligação ao Drive FX:</p>
+                <p>
+                    <button type="button" class="btn btn-default btn-lg" ng-click="addTreatment()">
+                        Adicionar tratamento
+                    </button>
+                </p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- navbar 'settings' -->
+    <div class="panel settings-view" ng-class="{'move-settings-panel' : viewSelected === 'settings'}">
+        <div class="row text-center">
+
+            <div class="col-xs-12"><i class="fa fa-cogs"></i></div>
+            <div class="col-xs-12"><label>Configuração</label></div>
+            <div class="col-xs-12">
+                <p>Configure a ligação ao seu Drive FX:</p>
+                <p>
+                    <button type="button" class="btn btn-default btn-lg" ng-click="setupDrive()">
+                        Configurar
+                    </button>
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+</div><!-- Home END -->
