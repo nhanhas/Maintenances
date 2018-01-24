@@ -16,28 +16,19 @@
 
     <div class="row text-center" ng-show="viewSelected==='order'">
 
-        <div class="col-xs-3 home-option" ng-click="goBack()">
+        <div class="col-xs-4 home-option" ng-click="goBack()">
             <i class="fa fa-home"></i>
         </div>
-        <div class="col-xs-3 add-product-option">
 
-            <div class="add-prod-wheel" ng-show="addProdClicked">
-                <div class="col-xs-6" ng-click="addNewProductBar()"><i class="fa fa-barcode"></i></div>
-                <div class="col-xs-6" ng-click="addNewProductManual()"><i class="fa fa-pencil-square-o"></i></div>
-            </div>
 
-            <i class="fa fa-plus" ng-click="toggleAddNew()"></i>
-            <p class="description">Adicionar</p>
-        </div>
-
-        <div class="col-xs-3 finish-option" ng-click="onFinishInvoince()">
-            <i class="fa fa-check"></i>
-            <p class="description">Finalizar</p>
-        </div>
-
-        <div class="col-xs-3 reset-option" ng-click="onResetAll()">
+        <div class="col-xs-4 reset-option" ng-click="onResetAll()">
             <i class="fa fa-remove"></i>
             <p class="description">Reiniciar</p>
+        </div>
+
+        <div class="col-xs-4 finish-option" ng-click="onFinishInvoince()">
+            <i class="fa fa-check"></i>
+            <p class="description">Finalizar</p>
         </div>
 
     </div>

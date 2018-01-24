@@ -20,6 +20,10 @@ app
                     templateUrl: 'layout/treatment/treatment.html',
                     controller: 'TreatmentController'
                 }).
+                when('/ticket', {
+                    templateUrl: 'layout/ticket/ticket.html',
+                    controller: 'TicketController'
+                }).
                 when('/settings', {
                     templateUrl: 'layout/settings/settings.html',
                     controller: 'SettingsController'

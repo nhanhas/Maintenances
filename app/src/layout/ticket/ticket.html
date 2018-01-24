@@ -1,0 +1,98 @@
+<!-- toolbar -->
+<toolbar view-selected="{{toolbarSelected}}" on-start="onStartingTicket()"  on-reset="onResetAll()" on-finish="onFinishTicket()"></toolbar>
+
+<div class="sync-div" ng-show="synching">
+
+    <div class="col-xs-4 col-xs-offset-4 text-center">
+        <h5>A processar</h5>
+        <span><i class="fa fa fa-spinner fa-spin fa-3x"></i></span>
+    </div>
+
+</div>
+
+
+
+<!-- Include the  content to show -->
+<div class="Ticket">
+
+
+
+
+
+    <div class="panel ticket-view" ng-show="!mustConfig">
+
+        <!-- Config needed... -->
+        <div class="panel ticket-view" ng-show="step0">
+            <div class="row config-row">
+
+                <div class="col-xs-12 text-center">
+                    <h3>Configuração necessária</h3>
+                    <h3>para adicionar Pedidos</h3>
+                    <span><i class="fa fa fa-cogs fa-3x"></i></span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Choose Asset -->
+        <div class="panel ticket-view" ng-show="stepChoose">
+            <div class="row config-row" >
+
+                <div class="col-xs-12 text-center">
+                    <h3>Escolha o Ativo</h3>
+                    <h3>para o novo pedido</h3>
+                </div>
+                <!-- client choose-->
+                <div class="col-xs-12 text-center asset-select">
+
+                    <!-- Stable Version -->
+                    <!--<select ng-model="clientSelected" class="client-option">
+                        <option ng-repeat="client in clientList" value="{{client.no}}">{{client.nome}}</option>
+                    </select>-->
+
+                    <div class="ui fluid search selection dropdown asset-select">
+                        <input type="hidden" ng-model="assetSelected" name="client" id="assetInput">
+                        <i class="dropdown icon"></i>
+                        <div id="assetLabel" class="default text">Ativo</div>
+                        <div class="menu">
+                            <!-- <div class="item" data-value="af"></i>Afghanistan</div> -->
+
+                            <div class="item" style="font-size:12px" data-value="{{asset.reference}}" ng-repeat="asset in assetList"></i>{{asset.description}}</div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- fulfill form -->
+        <div class="panel ticket-view" ng-show="step1">
+            <div class="row" >
+                <div class="col-xs-12 text-center">
+                    <h1>Dados do Pedido</h1>
+                </div>
+
+                <!-- Valor do Contador -->
+                <div class="col-xs-12 " style=" margin-top: 20px;">
+
+                    <div class="input-group">
+                        <label class="input-group-addon"><i class="fa fa-cogs"></i></label>
+                        <input type="text" class="form-control" placeholder="Valor do contador" aria-describedby="basic-addon1" ng-model="countervalue">
+                    </div>
+
+                </div>
+
+                <div class="col-xs-12" style=" margin-top: 10px;">
+                    <label>Descrição do pedido</label>
+                    <textarea rows="4" cols="50" ng-model="treatmentText"></textarea>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,80 @@
+.Ticket {
+  left: 0;
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+  position: fixed;
+  right: 0;
+  bottom: 80px;
+  top: 0;
+  overflow: hidden; }
+  .Ticket .row {
+    padding: 5px;
+    margin: 0; }
+    .Ticket .row > div {
+      padding: 0; }
+  .Ticket .ticket-view {
+    background-color: #607D8B;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    padding-top: 0px;
+    overflow: auto; }
+  .Ticket .panel {
+    transition: all 0.5s cubic-bezier(0.5, -0.005, 0.2, 1) !important;
+    -webkit-transition: all 0.5s cubic-bezier(0.5, -0.005, 0.2, 1) !important;
+    color: #fff; }
+    .Ticket .panel > .row > div {
+      margin-bottom: 15px; }
+  .Ticket p {
+    margin-bottom: 0; }
+  .Ticket .input-group i {
+    width: 14px; }
+  .Ticket .panel label, .Ticket .panel input {
+    background-color: initial;
+    color: white; }
+  .Ticket .panel ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: white; }
+  .Ticket .panel ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: white; }
+  .Ticket .panel :-ms-input-placeholder {
+    /* IE 10+ */
+    color: white; }
+  .Ticket .panel :-moz-placeholder {
+    /* Firefox 18- */
+    color: white; }
+  .Ticket .select-option {
+    width: 100%;
+    height: 40px;
+    background-color: #607D8B;
+    border: 1px solid white;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+  .Ticket .treatment-hint {
+    margin-top: 30px; }
+  .Ticket textarea {
+    color: white;
+    width: 100%;
+    height: 120px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 6px; }
+
+.search {
+  color: black !important; }
+
+.sync-div {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(1, 1, 1, 0.3); }
+  .sync-div > div {
+    padding-bottom: 20px;
+    margin-top: 210px;
+    color: white;
+    background-color: rgba(1, 1, 1, 0.3);
+    border-radius: 24px; }

@@ -4,8 +4,8 @@ app
         //var for navbar selection
         $scope.viewSelected = 'home';
 
-        $scope.startOrder = function(){
-            $location.path('/order');
+        $scope.startTicket = function(){
+            $location.path('/ticket');
         };
 
         $scope.viewPending = function(){
