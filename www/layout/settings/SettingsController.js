@@ -29,11 +29,10 @@ app
 
         $scope.updateFlags = function(){
 
-            $scope.step1 = (!$scope.credentials || !$scope.isReadyConnection) && $scope.docType === undefined;
-            $scope.step2 = ($scope.credentials && $scope.isReadyConnection) && $scope.docType === undefined;
-            $scope.step3 = ($scope.credentials && $scope.isReadyConnection) && $scope.docType !== undefined;
+            $scope.step1 = (!$scope.credentials || !$scope.isReadyConnection);
+            $scope.step2 = ($scope.credentials && $scope.isReadyConnection) ;
 
-            $scope.toolbarSelected = $scope.step2 === true ? 'settings-finalize' : 'settings';
+            $scope.toolbarSelected = $scope.step2 === true ? 'settings-last' : 'settings';
 
             if($scope.step3){
                 $scope.toolbarSelected = 'settings-last';
